@@ -45,10 +45,6 @@ nav {
     padding: 10px;
 }
 
-.login-button:hover .login-dropdown {
-    display: block;
-}
-
 .login-dropdown ul {
     list-style: none;
     padding: 0;
@@ -141,7 +137,6 @@ nav ul li:hover .dropdown {
     display: flex;
 }
 
-
 .dropdown ul {
     padding: 0;
     margin: 0;
@@ -153,7 +148,6 @@ nav ul li:hover .dropdown {
     cursor: pointer;
     color: black;
 }
-
 
 .dropdown li:hover {
     background-color: #f0f0f0;
@@ -178,6 +172,29 @@ nav ul li:hover .dropdown {
 }
 
 .academics-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+.departments-dropdown {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.departments-dropdown .dropdown-column {
+    margin-right: 20px;
+}
+
+.departments-dropdown h3 {
+    margin: 0 0 10px 0;
+}
+
+.departments-dropdown a {
+    text-decoration: none;
+    color: black;
+}
+
+.departments-dropdown a:hover {
     background-color: #f0f0f0;
 }
 

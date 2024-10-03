@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <nav className='upperNav'>
-            
+            {/* Login Button in upper left corner */}
             <div 
                 className="login-button" 
                 onClick={toggleDropdown(setLoginDropdownOpen)}
@@ -44,6 +44,7 @@ const Navbar = () => {
             </ul>
             <img src={logo} alt="logo" className='logo' />
             <ul className='lowernav'>
+                {/* Academics Dropdown */}
                 <li 
                     onMouseEnter={toggleDropdown(setAcademicsDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setAcademicsDropdownOpen)}
@@ -106,21 +107,44 @@ const Navbar = () => {
                         </div>
                     )}
                 </li>
+
+                {/* Admission Dropdown */}
                 <li 
                     onMouseEnter={toggleDropdown(setAdmissionDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setAdmissionDropdownOpen)}
                     style={{ position: 'relative' }}
                 >
-                    Admissions
+                    Admission
                     {admissionDropdownOpen && (
                         <div className="dropdown">
-                            <ul>
-                                <li>How to Apply</li>
-                                <li>Eligibility</li>
-                            </ul>
+                            <div className="dropdown-column">
+                                <ul>
+                                    <li><b>Get Started</b></li>
+                                    <li>Admission Procedure</li>
+                                    <li>Reservation Policy</li>
+                                    <li>Tuition Fees Waiver Scheme</li>
+                                    <li>Scholarships</li>
+                                    <li>Fees Structure (2022-23)</li>
+                                    <li>Fees Structure (2021-22)</li>
+                                </ul>
+                                <ul>
+                                    <li><b>Regular Course</b></li>
+                                    <li>B.Tech</li>
+                                    <li>M.Tech</li>
+                                    <li>MCA</li>
+                                    <li>MBA</li>
+                                    <li>PhD</li>
+                                </ul>
+                                <ul>
+                                    <li><b>Lateral Entry Courses</b></li>
+                                    <li>B.Tech Lateral Entry</li>
+                                </ul>
+                            </div>
                         </div>
                     )}
                 </li>
+
+                {/* Departments Dropdown */}
                 <li 
                     onMouseEnter={toggleDropdown(setDepartmentsDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setDepartmentsDropdownOpen)}
@@ -128,29 +152,76 @@ const Navbar = () => {
                 >
                     Departments
                     {departmentsDropdownOpen && (
-                        <div className="dropdown">
-                            <ul>
-                                <li>Department 1</li>
-                                <li>Department 2</li>
-                            </ul>
+                        <div className="dropdown departments-dropdown">
+                            <div className="dropdown-column">
+                                <h3>Engineering Departments</h3>
+                                <ul>
+                                    <li><a href="#">Civil Engineering</a></li>
+                                    <li><a href="#">Mechanical Engineering</a></li>
+                                    <li><a href="#">Electrical Engineering</a></li>
+                                    <li><a href="#">Computer Science & Engineering</a></li>
+                                </ul>
+                            </div>
+                            <div className="dropdown-column">
+                                <h3>Basic Science Departments</h3>
+                                <ul>
+                                    <li><a href="#">Physics</a></li>
+                                    <li><a href="#">Chemistry</a></li>
+                                    <li><a href="#">Mathematics</a></li>
+                                    <li><a href="#">Humanities</a></li>
+                                </ul>
+                            </div>
+                            <div className="dropdown-column">
+                                <h3>Management Departments</h3>
+                                <ul>
+                                    <li><a href="#">Business Administration</a></li>
+                                    <li><a href="#">Financial Studies</a></li>
+                                </ul>
+                            </div>
                         </div>
                     )}
                 </li>
+
+                {/* Placement Dropdown */}
                 <li 
                     onMouseEnter={toggleDropdown(setPlacementsDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setPlacementsDropdownOpen)}
                     style={{ position: 'relative' }}
                 >
-                    Placements
+                    Placement
                     {placementsDropdownOpen && (
                         <div className="dropdown">
-                            <ul>
-                                <li>Placement Stats</li>
-                                <li>Companies Visited</li>
-                            </ul>
+                            <div className="dropdown-column">
+                                <ul>
+                                    <li><b>Overview</b></li>
+                                    <li>About T&P</li>
+                                    <li>Placement Team</li>
+                                    <li>Placement Gallery</li>
+                                    <li>Contact T&P Cell</li>
+                                </ul>
+                                <ul>
+                                    <li><b>For Companies</b></li>
+                                    <li>Why Recruit BITians</li>
+                                    <li>Placement Procedure</li>
+                                    <li>Placement Statistics</li>
+                                    <li>Infrastructure For T&P</li>
+                                </ul>
+                                <ul>
+                                    <li><b>Esteemed Recruiters</b></li>
+                                    <li>Recruiters</li>
+                                    <li>Recruiters Feedback</li>
+                                </ul>
+                                <ul>
+                                    <li><b>Entrepreneurship Development Cell</b></li>
+                                    <li>About ED Cell</li>
+                                    <li>Programs Conducted</li>
+                                </ul>
+                            </div>
                         </div>
                     )}
                 </li>
+
+                {/* Campus Life Dropdown */}
                 <li 
                     onMouseEnter={toggleDropdown(setCampusDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setCampusDropdownOpen)}
@@ -159,14 +230,30 @@ const Navbar = () => {
                     Campus Life
                     {campusDropdownOpen && (
                         <div className="dropdown">
-                            <ul>
-                                <li>Events</li>
-                                <li>Facilities</li>
-                            </ul>
+                            <div className="dropdown-column">
+                                <ul>
+                                    <li><b>Clubs @ BIT-Durg</b></li>
+                                    <li>Astro Club</li>
+                                    <li>Clicks Club</li>
+                                    <li>Techno Hub</li>
+                                    <li>PAC</li>
+                                    <li>Vista Club</li>
+                                    <li>Music & Dance Club</li>
+                                </ul>
+                            </div>
+                            <div className="dropdown-column">
+                                <ul>
+                                    <li><b>Facilities @ BIT-Durg</b></li>
+                                    <li>Hostel Facilities</li>
+                                    <li>Sports Facilities</li>
+                                    <li>Medical Facilities</li>
+                                </ul>
+                            </div>
                         </div>
                     )}
                 </li>
-             
+
+                {/* Previous Year Question Paper */}
                 <li 
                     onMouseEnter={toggleDropdown(setPreviousYearDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setPreviousYearDropdownOpen)}
@@ -185,7 +272,6 @@ const Navbar = () => {
                                         style={{ cursor: 'pointer' }}
                                     >
                                         1st year
-                                       
                                     </li>
                                     <li>2nd year</li>
                                     <li>3rd year</li>
@@ -195,6 +281,8 @@ const Navbar = () => {
                         </div>
                     )}
                 </li>
+
+                {/* Notes */}
                 <li 
                     onMouseEnter={toggleDropdown(setNotesDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setNotesDropdownOpen)}
@@ -205,7 +293,6 @@ const Navbar = () => {
                         <div className="dropdown">
                             <ul>
                                 <li>Class Notes</li>
-                                
                             </ul>
                         </div>
                     )}

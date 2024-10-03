@@ -1,0 +1,79 @@
+/* General Footer Styling */
+.footer {
+    background-color: #f3f3f3; /* Light grey background */
+    color: #333; /* Dark text */
+    padding: 2rem 0; /* Padding at top and bottom */
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media(min-width: 768px) {
+    .footer-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Footer Titles */
+  .footer-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer Links Styling */
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff; /* Blue hover color */
+  }
+  
+  /* Footer Social Icons */
+  .footer-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .footer-icon:hover {
+    color: #007bff; /* Blue hover color */
+  }
+  
+  /* Copyright Section */
+  .footer-copyright {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
