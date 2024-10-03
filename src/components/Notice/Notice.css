@@ -1,0 +1,96 @@
+.notice-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.tab-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.notice-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+.notice-card:hover {
+  transform: translateY(-5px);
+}
+
+.notice-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.notice-date i {
+  margin-right: 5px;
+}
+
+.notice-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.notice-content p {
+  color: #666;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.btn-read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-read-more:hover {
+  background-color: #0056b3;
+}
+
+.navigation-arrows {
+  margin-top: 20px;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.arrow-btn:hover {
+  color: #007bff;
+}

@@ -1,0 +1,14 @@
+.viso {
+    max-width: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.viso img {
+    max-width: 100%;
+    height: auto;   
+    display: block; 
+}
