@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-grid">
           <div>
-            <h2 className="footer-title">Contact Us</h2>
+            <h2 className="footer-title contact">Contact Us</h2>
             <p>Bhilai Institute of Technology</p>
             <p>Bhilai House, Durg - 491001</p>
             <p>Chhattisgarh, India</p>
@@ -21,6 +21,12 @@ const Footer = () => {
               <li><a href="#">AICTE Mandatory Disclosure</a></li>
               <li><a href="#">NIRF</a></li>
               <li><a href="#">NBA Accreditation</a></li>
+              <li><a href="#">OJAS</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">NCC</a></li>
+              <li><a href="#">NSS</a></li>
+              <li><a href="#">Clubs</a></li>
+
             </ul>
           </div>
           <div>

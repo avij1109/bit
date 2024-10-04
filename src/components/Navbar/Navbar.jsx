@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Navbar.css"; // Ensure the CSS file is imported
+import "./Navbar.css"; 
 import logo from "../../assets/navv.png"; 
 import naac from "../../assets/naac.png";
 import nba from "../../assets/nba.png";
@@ -18,14 +18,13 @@ const Navbar = () => {
         setIsLoginDropdownOpen(prev => !prev);
     };
 
-    // Close dropdown if clicking outside
+    
     const handleClickOutside = (event) => {
         if (event.target.closest('.login-dropdown') === null && event.target.closest('.login-button') === null) {
             setIsLoginDropdownOpen(false);
         }
     };
 
-    // Add event listener
     React.useEffect(() => {
         document.addEventListener('click', handleClickOutside);
         return () => {
@@ -171,6 +170,8 @@ const Navbar = () => {
                                     <li><a href="#">Mechanical Engineering</a></li>
                                     <li><a href="#">Electrical Engineering</a></li>
                                     <li><a href="#">Computer Science & Engineering</a></li>
+                                    <li><a href="#">Electronics & Telecom. Engineering</a></li>
+                                    <li><a href="#">Electrical & Electronics Engineering</a></li>
                                 </ul>
                             </div>
                             <div className="dropdown-column">
@@ -185,8 +186,15 @@ const Navbar = () => {
                             <div className="dropdown-column">
                                 <h3>Management Departments</h3>
                                 <ul>
-                                    <li><a href="#">Business Administration</a></li>
-                                    <li><a href="#">Financial Studies</a></li>
+                                    <li><a href="#">MBA</a></li>
+                                   
+                                </ul>
+                            </div>
+                            <div className="dropdown-column">
+                                <h3>Computer Applications Department</h3>
+                                <ul>
+                                    <li><a href="#">MCA</a></li>
+                                   
                                 </ul>
                             </div>
                         </div>
