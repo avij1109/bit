@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import "./Navbar.css";
+import "./Navbar.css"; // Ensure the CSS file is imported
 import logo from "../../assets/navv.png"; 
 import naac from "../../assets/naac.png";
 import nba from "../../assets/nba.png";
 
 const Navbar = () => {
+    const [isLoginDropdownOpen, setIsLoginDropdownOpen] = useState(false);
     const [academicsDropdownOpen, setAcademicsDropdownOpen] = useState(false);
     const [admissionDropdownOpen, setAdmissionDropdownOpen] = useState(false);
     const [departmentsDropdownOpen, setDepartmentsDropdownOpen] = useState(false);
@@ -12,30 +13,43 @@ const Navbar = () => {
     const [campusDropdownOpen, setCampusDropdownOpen] = useState(false);
     const [previousYearDropdownOpen, setPreviousYearDropdownOpen] = useState(false);
     const [notesDropdownOpen, setNotesDropdownOpen] = useState(false);
-    const [loginDropdownOpen, setLoginDropdownOpen] = useState(false);
+
+    const toggleLoginDropdown = () => {
+        setIsLoginDropdownOpen(prev => !prev);
+    };
+
+    // Close dropdown if clicking outside
+    const handleClickOutside = (event) => {
+        if (event.target.closest('.login-dropdown') === null && event.target.closest('.login-button') === null) {
+            setIsLoginDropdownOpen(false);
+        }
+    };
+
+    // Add event listener
+    React.useEffect(() => {
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
 
     const toggleDropdown = (setter) => () => setter(prev => !prev);
 
     return (
         <nav className='upperNav'>
-           
-            <div 
-                className="login-button" 
-                onClick={toggleDropdown(setLoginDropdownOpen)}
-                style={{ cursor: 'pointer' }}
-            >
+            <div className="login-button" onClick={toggleLoginDropdown}>
                 Login
-                {loginDropdownOpen && (
-                    <div className="dropdown login-dropdown">
-                        <ul>
-                            <li>Student</li>
-                            <li>Parent's</li>
-                            <li>Employee</li>
-                            <li>HOD/Incharge</li>
-                        </ul>
-                    </div>
-                )}
             </div>
+            {isLoginDropdownOpen && (
+                <div className="login-dropdown">
+                    <ul>
+                        <li>Student</li>
+                        <li>Parent's</li>
+                        <li>Employee</li>
+                        <li>HOD/Incharge</li>
+                    </ul>
+                </div>
+            )}
 
             <ul className='upperNavLinks'>
                 <li>Home</li>
@@ -44,7 +58,6 @@ const Navbar = () => {
             </ul>
             <img src={logo} alt="logo" className='logo' />
             <ul className='lowernav'>
-               
                 <li 
                     onMouseEnter={toggleDropdown(setAcademicsDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setAcademicsDropdownOpen)}
@@ -108,7 +121,6 @@ const Navbar = () => {
                     )}
                 </li>
 
-              
                 <li 
                     onMouseEnter={toggleDropdown(setAdmissionDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setAdmissionDropdownOpen)}
@@ -144,7 +156,6 @@ const Navbar = () => {
                     )}
                 </li>
 
-               
                 <li 
                     onMouseEnter={toggleDropdown(setDepartmentsDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setDepartmentsDropdownOpen)}
@@ -182,7 +193,6 @@ const Navbar = () => {
                     )}
                 </li>
 
-              
                 <li 
                     onMouseEnter={toggleDropdown(setPlacementsDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setPlacementsDropdownOpen)}
@@ -221,7 +231,6 @@ const Navbar = () => {
                     )}
                 </li>
 
-               
                 <li 
                     onMouseEnter={toggleDropdown(setCampusDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setCampusDropdownOpen)}
@@ -232,21 +241,12 @@ const Navbar = () => {
                         <div className="dropdown">
                             <div className="dropdown-column">
                                 <ul>
-                                    <li><b>Clubs @ BIT-Durg</b></li>
-                                    <li>Astro Club</li>
-                                    <li>Clicks Club</li>
-                                    <li>Techno Hub</li>
-                                    <li>PAC</li>
-                                    <li>Vista Club</li>
-                                    <li>Music & Dance Club</li>
-                                </ul>
-                            </div>
-                            <div className="dropdown-column">
-                                <ul>
-                                    <li><b>Facilities @ BIT-Durg</b></li>
+                                    <li><b>Campus Overview</b></li>
+                                    <li>Infrastructure</li>
                                     <li>Hostel Facilities</li>
+                                    <li>Library Facilities</li>
                                     <li>Sports Facilities</li>
-                                    <li>Medical Facilities</li>
+                                    <li>Health Care Facilities</li>
                                 </ul>
                             </div>
                         </div>
