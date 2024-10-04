@@ -95,3 +95,30 @@
 width: 400px;
 height: 200px;
   }
+  @media (max-width: 768px) {
+    .media-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .message-from-principal, 
+    .latest-media-coverage {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .principal-photo, 
+    .news-thumbnail {
+        width: 100%;
+    }
+
+    .principal-message-text {
+        text-align: left;
+        padding: 15px;
+    }
+
+    .button-link {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

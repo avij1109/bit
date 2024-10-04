@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <nav className='upperNav'>
-            {/* Login Button in upper left corner */}
+           
             <div 
                 className="login-button" 
                 onClick={toggleDropdown(setLoginDropdownOpen)}
@@ -44,7 +44,7 @@ const Navbar = () => {
             </ul>
             <img src={logo} alt="logo" className='logo' />
             <ul className='lowernav'>
-                {/* Academics Dropdown */}
+               
                 <li 
                     onMouseEnter={toggleDropdown(setAcademicsDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setAcademicsDropdownOpen)}
@@ -108,7 +108,7 @@ const Navbar = () => {
                     )}
                 </li>
 
-                {/* Admission Dropdown */}
+              
                 <li 
                     onMouseEnter={toggleDropdown(setAdmissionDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setAdmissionDropdownOpen)}
@@ -144,7 +144,7 @@ const Navbar = () => {
                     )}
                 </li>
 
-                {/* Departments Dropdown */}
+               
                 <li 
                     onMouseEnter={toggleDropdown(setDepartmentsDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setDepartmentsDropdownOpen)}
@@ -182,7 +182,7 @@ const Navbar = () => {
                     )}
                 </li>
 
-                {/* Placement Dropdown */}
+              
                 <li 
                     onMouseEnter={toggleDropdown(setPlacementsDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setPlacementsDropdownOpen)}
@@ -221,7 +221,7 @@ const Navbar = () => {
                     )}
                 </li>
 
-                {/* Campus Life Dropdown */}
+               
                 <li 
                     onMouseEnter={toggleDropdown(setCampusDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setCampusDropdownOpen)}
@@ -253,7 +253,7 @@ const Navbar = () => {
                     )}
                 </li>
 
-                {/* Previous Year Question Paper */}
+              
                 <li 
                     onMouseEnter={toggleDropdown(setPreviousYearDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setPreviousYearDropdownOpen)}
@@ -282,7 +282,7 @@ const Navbar = () => {
                     )}
                 </li>
 
-                {/* Notes */}
+                
                 <li 
                     onMouseEnter={toggleDropdown(setNotesDropdownOpen)} 
                     onMouseLeave={toggleDropdown(setNotesDropdownOpen)}

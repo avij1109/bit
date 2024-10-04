@@ -208,3 +208,56 @@ nav ul li:hover .dropdown {
         width: 100%; 
     }
 }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .upperNavLinks ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .login-button {
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .lowernav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .dropdown {
+        position: static; 
+        width: 100%;
+    }
+
+    .dropdown-column {
+        flex-direction: column;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .dropdown li {
+        padding: 8px;
+    }
+}
